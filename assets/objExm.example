@@ -1,0 +1,7 @@
+var obj = Object.new()
+
+var person={name:'Brian', height:'6'1'}
+
+	person.name  //Bring back the name property of the 'person' object
+  person.hobby = 'Snowboarding'
+  person.occupation = 'Programmer'

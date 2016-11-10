@@ -1,0 +1,9 @@
+var colors=["red", "white", "blue"]
+
+colors[0]            
+colors.reverse
+colors.indexOf("white")
+colors.include("purple")
+colors.push("green")
+colors.pop
+colors.length

@@ -1,0 +1,8 @@
+var greeting = "Hello";
+var name = "Brian";
+
+console.log(greeting);
+console.log("My name is " + name);
+
+var doMath = "The result is " + 3 * 4;
+console.log(doMath);

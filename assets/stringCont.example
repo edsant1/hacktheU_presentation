@@ -1,0 +1,5 @@
+var longString = "This is a long string"
+var shortString = "shorter"
+longString.length -> 21
+longString.length > shortString.length -> true
+shortString.charAt(2) -> "o"

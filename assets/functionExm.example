@@ -1,0 +1,14 @@
+function addTwoNumbers(num1, num2){
+  return num1 + num2;
+}
+
+var myNumber = addTwoNumbers(1,3);
+
+var workedHours = function(hours){
+	if (hours < 8 ){
+		return "Get back to work";
+	} else
+		return "Time to go home";
+}
+
+workedHours(7);

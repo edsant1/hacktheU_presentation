@@ -1,0 +1,24 @@
+for(var i = 0; i < 10; i++) {
+console.log(i);
+}
+
+var citties = ["New York", "Seattle", "San Francisco"];
+
+for(var i = 0; i < citties.length; i++) {
+  visit = "I Would Like to Visit" + " " + citties[i];
+  console.log(visit);
+};
+
+forEach is an Array class method that can be called on an array and is used
+if you want to pass it to a function without skipping elements
+
+var myArr = [1,2,3,4];
+
+myArr.forEach(function(value) {
+	console.log(value);
+});
+
+it's best used when manipulating the DOM elements
+
+function hide(el) {
+	el.style.display = 'none';

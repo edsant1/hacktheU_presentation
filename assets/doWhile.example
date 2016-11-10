@@ -1,0 +1,26 @@
+var n = true;
+
+while(n){
+	console.log("I'm going to loop once!");
+	n = false;
+}
+
+var num = 0;
+
+var loop = function() {
+	while( num < 5 ){
+		var num = num + 1;
+	}
+};
+
+loop();
+
+
+"A DO ..While is a modified version of while. Used when you need to run the loop at least once
+and then check to see if the condition in true"
+
+var n = false;
+
+do {
+	console.log("I'm going to run once even though I'm " + n );
+} while(n);
