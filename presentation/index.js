@@ -36,10 +36,12 @@ require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 
-// const images = {
-// };
+const images = {
+  code: require("../assets/codebg.jpg"),
+  js: require("../assets/JS.jpg")
+};
 
-// preloader(images);
+preloader(images);
 
 const theme = createTheme({
   primary: "#556b2f",
@@ -51,11 +53,11 @@ export default class Presentation extends React.Component {
     return (
       <Spectacle theme={theme}>
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
-          <Slide transition={["zoom"]} bgColor="primary">
-            <Heading size={1} Fit cap lineHeight={1} textColor="secondary">
+          <Slide transition={["zoom"]} bgImage={images.code} bgDarken={0.25}>
+            <Heading size={1} Fit cap lineHeight={1} textColor="#ff4081">
               So you want to
             </Heading>
-            <Heading size={1} Fit cap lineHeight={1} textColor="secondary">
+            <Heading size={1} Fit cap lineHeight={1} textColor="#ff4081">
               Learn Javascript
             </Heading>
             <Text lineHeight={2} textColor="white">
@@ -144,7 +146,7 @@ export default class Presentation extends React.Component {
               <ListItem>Math.min(1, 4, 9)</ListItem>
               <ListItem>Math.max(11, 9, 21)</ListItem>
               <ListItem>Math.round(8.3)</ListItem>
-              <ListItem>Math.floor(4.8)</ListItem>
+              <ListItem>Math.Pi</ListItem>
             </List>
           </Slide>
           <Slide>
@@ -169,17 +171,17 @@ export default class Presentation extends React.Component {
             <Heading size={1} Fill Fit lineHeight={1} textColor="secondary">
               Lets talk about Loops
             </Heading>
-            <Appear>
-              <List>
-                <ListItem textColor="white">for</ListItem>
-                <ListItem textColor="white">forEach</ListItem>
-                <ListItem textColor="white">do ..while</ListItem>
-                <ListItem textColor="white">while</ListItem>
-                <ListItem textColor="white">for ..in</ListItem>
-                <ListItem textColor="white">for ..of</ListItem>
-                <ListItem textColor="white">map</ListItem>
-              </List>
-            </Appear>
+              <Appear>
+                <List>
+                  <ListItem textColor="white">for</ListItem>
+                  <ListItem textColor="white">forEach</ListItem>
+                  <ListItem textColor="white">do ..while</ListItem>
+                  <ListItem textColor="white">while</ListItem>
+                  <ListItem textColor="white">for ..in</ListItem>
+                  <ListItem textColor="white">for ..of</ListItem>
+                  <ListItem textColor="white">map</ListItem>
+                </List>
+              </Appear>
           </Slide>
           <Slide transition={["zoom"]} bgColor="White">
             <Text size={1} Fit cap lineHeight={2} textColor="#ff4081">
@@ -195,6 +197,26 @@ export default class Presentation extends React.Component {
               This loop will run while a condition is true!
             </Text>
             <CodePane lang="jsx" source={require("raw!../assets/doWhile.example")} />
+          </Slide>
+          <Slide transition={["spin", "fade"]} bgColor="white">
+            <Text size={1} Fill Fit lineHeight={1} textColor="#ff4081">
+              if / else statements & Switch
+            </Text>
+            <CodePane lang="jsx" source={require("raw!../assets/ifElseSwitch.example")} />
+          </Slide>
+          <Slide bgColor="secondary">
+            <Heading size={1} Fill Fit lineHeight={1.5} textColor="#ff4081">
+              Some Resources <img src={images.js}></img>
+            </Heading>
+            <Appear>
+              <List>
+                <ListItem textColor="white">JavaScript.com</ListItem>
+                <ListItem textColor="white">CodeSchool.com or Codecademy.com</ListItem>
+                <ListItem textColor="white">You don't know JS series by Kyle Simpson</ListItem>
+                <ListItem textColor="white">Eloquent Javascript by Marijn Haverbeke</ListItem>
+                <ListItem textColor="white">DevPoint Labs</ListItem>
+              </List>
+            </Appear>
           </Slide>
         </Deck>
       </Spectacle>

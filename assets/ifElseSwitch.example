@@ -1,0 +1,32 @@
+You can do easy statements
+if (3 === 3){
+	return "True"
+} else {
+	return "False"
+};
+Or you can do a bit more complicated
+var numIsEven = function(num) {
+	if (num % 2 ){
+		return "It's an odd number";
+    } else
+        return "It's an even number"
+};
+console.log(numIsEven(10));
+if / else statements can become very long if you have many conditions to meet
+switch statements help in this case.
+
+var nameArr = ["Edwin", "Dave", "Will", "Nhi"];
+var result;
+switch(namArr){
+	case "Edwin":
+		result = "He's a catch";
+	case "Dave":
+		result = "Smart Guy";
+	case "Will":
+		result = "Easy going";
+	case "Nhi":
+		result = "Funny Guy";
+	default:
+		result = "No name input";
+}
+console.log(result);
