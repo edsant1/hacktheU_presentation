@@ -31,9 +31,12 @@ import createTheme from "spectacle/lib/themes/default";
 // Import custom component
 import Interactive from "../assets/interactive";
 
+import Calculator from "../assets/Calculator";
+
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
+require("../assets/index.css");
 
 
 const images = {
@@ -81,11 +84,10 @@ export default class Presentation extends React.Component {
             </Heading>
             <Text lineHeight={2} textColor="white">
                 <Layout>var name = "Brian"</Layout>
-                var tells JS to set data aside
-                name is the name of the variable
-                in this case it's Brian
-                console.log(name) => "Brian"
-                convention is camelCase
+                var tells JS to set data aside.
+                'name' is the name of the variable.<br />
+                console.log(name)<br />=> "Brian"<br />
+                convention for variable names in JavaScript is camelCase<br />
                 var firstName = "Brian"
                 var lastName = "Phelps"
             </Text>
@@ -146,6 +148,7 @@ export default class Presentation extends React.Component {
               <ListItem>Math.min(1, 4, 9)</ListItem>
               <ListItem>Math.max(11, 9, 21)</ListItem>
               <ListItem>Math.round(8.3)</ListItem>
+              <ListItem>parseInt("10")</ListItem>
               <ListItem>Math.Pi</ListItem>
             </List>
           </Slide>
@@ -166,6 +169,12 @@ export default class Presentation extends React.Component {
               JavaScript Objects
             </Heading>
             <CodePane lang="jsx" source={require("raw!../assets/objExm.example")} />
+          </Slide>
+          <Slide>
+            <Heading size={1} Fit cap lineHeight={1.5} textColor="secondary">
+              JavaScript Alerts
+            </Heading>
+            <CodePane lang="jsx" source={require("raw!../assets/alertExm.example")} />
           </Slide>
           <Slide transition={["spin", "fade"]} bgColor="primary">
             <Heading size={1} Fill Fit lineHeight={1} textColor="secondary">
@@ -204,6 +213,22 @@ export default class Presentation extends React.Component {
             </Text>
             <CodePane lang="jsx" source={require("raw!../assets/ifElseSwitch.example")} />
           </Slide>
+          <Slide transition={["slide"]} bgColor="secondary">
+            <Heading size={1} Fill Fit lineHeight={1} textColor="#ff4081">
+              React
+            </Heading>
+            <List>
+              <ListItem textColor="white">React is a Javascript Library</ListItem>
+              <ListItem textColor="white">Consider it the V in MVC</ListItem>
+              <ListItem textColor="white">React was created by Jordan Walke, a software engineer at<br /> Facebook at the time</ListItem>
+              <ListItem textColor="white">React was Built to Solve one major problem, building large applications
+              with data that changes over time</ListItem>
+              <ListItem textColor="white">React does all the DOM manipulation</ListItem>
+            </List>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="white">
+            <Interactive />
+          </Slide>
           <Slide bgColor="secondary">
             <Heading size={1} Fill Fit lineHeight={1.5} textColor="#ff4081">
               Some Resources <img src={images.js}></img>
@@ -217,6 +242,11 @@ export default class Presentation extends React.Component {
                 <ListItem textColor="white">DevPoint Labs</ListItem>
               </List>
             </Appear>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="secondary">
+            <Heading size={1} caps fit textColor="#ff4081">
+              Calculator
+            </Heading>
           </Slide>
         </Deck>
       </Spectacle>

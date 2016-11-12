@@ -1,0 +1,5 @@
+console.log('Hello World')
+
+Alert('Hello World')
+
+var choice = confirm('Do you really want to leave?')

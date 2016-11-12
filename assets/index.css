@@ -1,0 +1,26 @@
+.container {
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.center{
+  text-align: center;
+}
+
+input {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.buttonRow {
+  width: 50%;
+  margin-left: 40%;
+}
+
+#output {
+  margin-left: 25%;
+}
+
+hr {
+  width: 20%;
+}
